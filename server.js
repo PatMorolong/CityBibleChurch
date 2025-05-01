@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'city-bible-church-website', 'index.html'));
 });
 
-// Fallback to index.html for unknown routes
+// Handle all other routes and fallback to index.html
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'city-bible-church-website', 'index.html'));
 });
