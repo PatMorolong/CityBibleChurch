@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - City Bible Church</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">City Bible Church</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="sermons.html">Sermons</a></li>
+                <li><a href="bible-study.html">Bible Study</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="prayer.html">Prayer Requests</a></li>
+                <li><a href="membership.html">Become a Member</a></li>
+                <li><a href="give.html">Give</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Get In Touch</h1>
+                <p>We'd Love to Hear From You</p>
+            </div>
+        </section>
+
+        <section class="contact-content container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p><strong>Address:</strong><br>
+                       16 Tololamoro Street, Block 8,<br>
+                       Gaborone, Botswana</p>
+                    <p><strong>Phone:</strong> <a href="tel:+26772991256">+267 72 991 256</a></p>
+                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/26772991256" target="_blank">+267 72 991 256</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@citybiblechurch.org">info@citybiblechurch.org</a></p>
+
+                    <h3>Operating Hours</h3>
+                    <p>Tuesday - Friday: 9:00 AM - 5:00 PM<br>
+                       Sunday Service: 10:00 AM</p>
+
+                    <h3>Visit Guidelines</h3>
+                    <p>[Placeholder: Add any specific guidelines for visiting the church office or premises, e.g., appointment needed, specific entrance, etc.]</p>
+                </div>
+
+                <div class="contact-form-section">
+                    <h2>Send Us a Message</h2>
+                    <form id="contact-form" class="styled-form">
+                        <div class="form-group">
+                            <label for="contact-name">Your Name</label>
+                            <input type="text" id="contact-name" name="contact-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Your Email</label>
+                            <input type="email" id="contact-email" name="contact-email" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="contact-subject">Subject</label>
+                            <input type="text" id="contact-subject" name="contact-subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" name="contact-message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </form>
+                     <p id="contact-submission-message" style="margin-top: 20px; text-align:center;"></p>
+                </div>
+            </div>
+
+            <div class="map-section">
+                <h2>Find Us</h2>
+                <div class="map-placeholder">
+                    <iframe
+                        src="https://maps.google.com/maps?q=16%20Tololamoro%20Street%2C%20Block%208%2C%20Gaborone%2C%20Botswana&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        width="100%"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content copied from index.html -->
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="sermons.html">Sermons</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="give.html">Give</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>16 Tololamoro Street, Block 8, Gaborone, Botswana</p>
+                <p>Phone: <a href="tel:+26772991256">+267 72 991 256</a></p>
+                <p>Email: info@citybiblechurch.org</p>
+                <p>WhatsApp: <a href="https://wa.me/26772991256" target="_blank">+267 72 991 256</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <p>Facebook | Twitter | Instagram</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 City Bible Church. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Chat/WhatsApp Button -->
+    <a href="https://wa.me/26772991256" target="_blank" class="chat-button" title="Chat on WhatsApp">
+        <img src="images/whatsapp-icon.png" alt="WhatsApp Chat"> <!-- Placeholder for icon -->
+    </a>
+
+    <script src="js/script.js"></script>
+     <script>
+        // Basic form submission feedback (no actual submission)
+        const contactForm = document.getElementById('contact-form');
+        const contactMessage = document.getElementById('contact-submission-message');
+        if(contactForm && contactMessage) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                contactMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+                contactMessage.style.color = 'green';
+                contactForm.reset(); // Clear the form
+                setTimeout(() => { contactMessage.textContent = ''; }, 5000); // Clear message after 5 seconds
+            });
+        }
+    </script>
+</body>
+</html>

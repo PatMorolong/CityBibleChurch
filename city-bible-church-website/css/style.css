@@ -1,0 +1,1006 @@
+/* Global Styles */
+:root {
+    --primary-color: #0a2463; /* Deep Navy Blue */
+    --secondary-color: #ffd700; /* Gold/Yellow Accent */
+    --accent-color: #f8f0e3; /* Soft Cream/Pinkish */
+    --text-color: #333;
+    --light-text-color: #fff;
+    --background-color: #ffffff;
+    --footer-background: #f1f1f1;
+
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--background-color);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-secondary);
+    margin-bottom: 0.8em;
+    color: var(--primary-color);
+}
+
+/* Secondary Button Style */
+.cta-button-secondary {
+    display: inline-block;
+    background: var(--background-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    border: 2px solid var(--primary-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 10px; /* Added some top margin */
+}
+
+.cta-button-secondary:hover {
+    background: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+
+/* Bible Study Page Specifics */
+.bible-study-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: left;
+}
+
+.current-study,
+.discussion-forum,
+.study-guides-archive {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.bible-study-content div:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.current-study h2,
+.discussion-forum h2,
+.study-guides-archive h2 {
+    margin-bottom: 0.5em;
+}
+
+.forum-placeholder {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.study-guides-archive ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.study-guides-archive ul li {
+    margin-bottom: 10px;
+}
+
+.study-guides-archive ul li a {
+    text-decoration: underline;
+}
+h1 { font-size: 2.8em; }
+h2 { font-size: 2.2em; }
+h3 { font-size: 1.5em; }
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Header & Navigation */
+header {
+    background: var(--background-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+nav .logo a {
+    display: flex; /* Align image and potential fallback text */
+    align-items: center;
+    font-family: var(--font-secondary);
+    font-size: 1.8em; /* Fallback text size */
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.logo-img {
+    height: 45px; /* Adjust height as needed */
+    width: auto;
+    margin-right: 10px; /* Space between logo and text/nav */
+}
+
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    font-family: var(--font-primary);
+    font-weight: 600;
+    padding: 5px 10px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(10, 36, 99, 0.7), rgba(10, 36, 99, 0.7)), url('../images/hero-placeholder.jpg') no-repeat center center/cover; /* Add a placeholder or actual image later */
+    color: var(--light-text-color);
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+    color: var(--light-text-color);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.hero-content .scripture {
+    font-style: italic;
+    margin-bottom: 1.5em;
+    color: var(--accent-color);
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+    background: #e6c300; /* Darker gold */
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Highlights Section */
+.highlights {
+    background-color: var(--accent-color);
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.highlight-item {
+    background: var(--background-color);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.highlight-item h3 {
+    margin-bottom: 0.5em;
+}
+
+.highlight-item a {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Events Page Specifics */
+.events-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: left;
+}
+
+.calendar-section {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.calendar-placeholder {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+    min-height: 400px; /* Placeholder height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+}
+
+/* Contact Page Specifics */
+.contact-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Adjust column ratio as needed */
+    gap: 40px;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.contact-info h2,
+.contact-form-section h2 {
+    margin-bottom: 1em;
+}
+
+.contact-info h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.contact-info p {
+    margin-bottom: 0.8em;
+    line-height: 1.7;
+}
+
+.contact-info p strong {
+    display: block; /* Make label bold and on its own line */
+    margin-bottom: 3px;
+    color: var(--primary-color);
+}
+
+.contact-form-section .styled-form {
+    margin: 0; /* Reset margin from global style */
+    padding: 0; /* Reset padding */
+    box-shadow: none; /* Remove shadow if not desired here */
+}
+
+.map-section {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.map-placeholder {
+    background: #f0f0f0;
+    border: 1px dashed #ccc;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+    min-height: 350px; /* Placeholder height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    /* For actual map iframe: */
+    /* position: relative; padding-bottom: 75%; height: 0; overflow: hidden; */
+}
+/* .map-placeholder iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; } */
+
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+    .contact-info {
+        margin-bottom: 30px;
+    }
+}
+
+.featured-events h2 {
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.event-list {
+    display: grid;
+    gap: 30px;
+}
+
+.event-item {
+    display: flex;
+    gap: 20px;
+    background: var(--background-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    align-items: center; /* Vertically align items */
+}
+
+.event-item img {
+    width: 150px; /* Adjust size as needed */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.event-details h3 {
+    font-size: 1.4em;
+    margin-bottom: 0.4em;
+}
+
+.event-details p {
+    margin-bottom: 0.6em;
+    color: #555;
+}
+
+.event-details p strong {
+    color: var(--text-color);
+}
+
+@media (max-width: 600px) {
+    .event-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .event-item img {
+        width: 100%;
+        height: 150px; /* Adjust height for mobile */
+        margin-bottom: 15px;
+    }
+}
+/* Verse of the Day */
+.verse-of-the-day {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+.verse-of-the-day h2 {
+    color: var(--secondary-color);
+}
+.verse-of-the-day blockquote {
+    font-size: 1.4em;
+    font-style: italic;
+    margin-bottom: 0.5em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.verse-of-the-day p {
+    font-size: 1.1em;
+    color: var(--accent-color);
+}
+
+
+/* Newsletter Section */
+.newsletter {
+    background-color: var(--footer-background);
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    margin: 20px auto 0;
+}
+
+.newsletter input[type="email"] {
+    padding: 12px;
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    border-radius: 25px 0 0 25px;
+    font-size: 1em;
+}
+
+.newsletter button {
+    padding: 12px 25px;
+    background: var(--primary-color);
+    color: var(--light-text-color);
+    border: none;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+
+/* Footer */
+footer {
+    background: var(--footer-background);
+    color: var(--text-color);
+    padding-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-family: var(--font-secondary);
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: var(--text-color);
+}
+.footer-section ul li a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.footer-section p {
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    font-size: 0.9em;
+}
+
+/* Chat Button Placeholder */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide nav links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        width: 100%;
+        background: var(--background-color);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        padding: 10px 0;
+    }
+
+    nav ul.active {
+        display: flex; /* Show when active */
+    }
+
+    nav ul li {
+        margin: 10px 20px;
+        text-align: center;
+    }
+
+    nav ul li a {
+        border-bottom: none;
+    }
+    nav ul li a.active,
+    nav ul li a:hover {
+        color: var(--secondary-color);
+        border-bottom: none;
+    }
+
+
+    .menu-toggle {
+        display: block; /* Show hamburger menu */
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-section {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+
+/* Basic Form Styling */
+.styled-form {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 30px;
+    background: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: var(--font-primary);
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px;
+}
+
+.form-group .checkbox-group {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.form-group .checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: auto; /* Override default width */
+    accent-color: var(--primary-color); /* Style checkbox color */
+}
+
+.form-group .checkbox-group label {
+    margin-bottom: 0; /* Reset margin for checkbox labels */
+    font-weight: normal;
+    color: var(--text-color);
+}
+
+.styled-form button[type="submit"] {
+    display: inline-block; /* Use inline-block for button */
+    width: auto; /* Override default width */
+    padding: 12px 30px; /* Adjust padding */
+    cursor: pointer;
+    margin-top: 10px;
+    /* Inherits .cta-button styles if class is applied */
+}
+
+/* Prayer Request Page Specifics */
+.prayer-request-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center; /* Center introductory text */
+}
+
+.prayer-request-content > p { /* Target only the direct child p for centering */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+/* Membership Page Specifics */
+.membership-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center; /* Center intro text */
+}
+
+.membership-content h2 {
+    margin-bottom: 1em;
+}
+
+.membership-content > p { /* Target intro paragraph */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.step-item {
+    background: var(--accent-color);
+    padding: 25px;
+    border-radius: 8px;
+    position: relative;
+    padding-top: 50px; /* Make space for number */
+}
+
+.step-number {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: var(--light-text-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: 700;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.step-item h3 {
+    margin-bottom: 0.5em;
+    font-size: 1.3em;
+}
+
+.membership-form-section {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid #eee;
+}
+
+.membership-form-section h2 {
+    margin-bottom: 0.5em;
+}
+
+.membership-form-section p {
+     max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+/* Give Page Specifics */
+.give-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center; /* Center intro text */
+}
+
+.give-content h2 {
+    margin-bottom: 0.8em;
+}
+
+.give-content > p { /* Target intro paragraph */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    text-align: left; /* Keep paragraph text left-aligned */
+}
+
+.give-options {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid #eee;
+    text-align: left;
+}
+
+.give-option-item {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: #fdfdfd; /* Slightly off-white */
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.give-option-item h3 {
+    margin-bottom: 0.5em;
+    font-size: 1.4em;
+}
+
+.donation-platform-placeholder {
+    background: #f0f0f0;
+    border: 1px dashed #ccc;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+    min-height: 100px; /* Placeholder height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+}
+/* Basic Page Header Styling */
+.page-header {
+    background-color: var(--accent-color);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.page-header h1 {
+    margin-bottom: 0.2em;
+}
+
+.page-header p {
+    font-size: 1.1em;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* About Page Specifics */
+.about-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: left;
+}
+
+.about-section {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.about-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.leader-profile img {
+    margin-bottom: 10px;
+}
+
+.leader-profile h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.leader-profile p {
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* Sermons Page Specifics */
+.sermons-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: left;
+}
+
+.livestream-section {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.livestream-section h2 {
+    margin-bottom: 0.5em;
+}
+
+.video-placeholder {
+    background: #f0f0f0;
+    min-height: 300px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border: 1px dashed #ccc;
+    color: #888;
+}
+
+.sermon-archive {
+    text-align: center;
+}
+
+.sermon-archive h2 {
+    margin-bottom: 0.5em;
+}
+
+.sermon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.sermon-item {
+    background: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    overflow: hidden; /* Ensures image fits */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sermon-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.sermon-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Crop image nicely */
+    display: block;
+}
+
+.sermon-item h3 {
+    font-size: 1.3em;
+    margin: 15px 20px 5px;
+}
+
+.sermon-item p {
+    margin: 0 20px 10px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.sermon-item .sermon-links {
+    margin: 15px 20px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.sermon-item .sermon-links a {
+    font-weight: 600;
+    margin-right: 15px;
+}
+
+.load-more-btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 10px 30px;
+    background: var(--primary-color);
+    color: var(--light-text-color);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.load-more-btn:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}

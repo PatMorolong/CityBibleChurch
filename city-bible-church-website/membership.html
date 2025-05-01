@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Member - City Bible Church</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                 <a href="index.html">
+                    <img src="../CBC CHURCH logo.png" alt="City Bible Church Logo" class="logo-img">
+                 </a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="sermons.html">Sermons</a></li>
+                <li><a href="bible-study.html">Bible Study</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="prayer.html">Prayer Requests</a></li>
+                <li><a href="membership.html" class="active">Become a Member</a></li>
+                <li><a href="give.html">Give</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Join Our Church Family</h1>
+                <p>Take the Next Step in Your Faith Journey</p>
+            </div>
+        </section>
+
+        <section class="membership-content container">
+            <h2>Steps to Membership</h2>
+            <p>We are thrilled you're considering becoming a member of City Bible Church! Membership is a commitment to connect with our church family and partner with us in our mission. Here are the steps to join:</p>
+
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3>Express Interest</h3>
+                    <p>Fill out the interest form below or speak to one of our pastors or leaders after a service. We'd love to connect with you.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3>Attend Orientation</h3>
+                    <p>Join our New Members' Orientation class where you'll learn more about our beliefs, vision, and how to get involved.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3>Baptism (If Applicable)</h3>
+                    <p>If you haven't been baptized by immersion after salvation, we encourage you to take this important step of faith.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <h3>Join a Department/Group</h3>
+                    <p>Connect with a small group or ministry department to serve, grow, and build relationships within the church family.</p>
+                </div>
+                 <div class="step-item">
+                    <div class="step-number">5</div>
+                    <h3>Welcome!</h3>
+                    <p>Once you've completed the steps, you'll be formally welcomed into membership during one of our Sunday services.</p>
+                </div>
+            </div>
+
+            <div class="membership-form-section">
+                <h2>Ready to Start?</h2>
+                <p>Fill out this form to let us know you're interested, and we'll contact you with details about the next orientation class.</p>
+                <form id="membership-interest-form" class="styled-form">
+                    <div class="form-group">
+                        <label for="member-name">Full Name</label>
+                        <input type="text" id="member-name" name="member-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="member-email">Email Address</label>
+                        <input type="email" id="member-email" name="member-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="member-phone">Phone Number</label>
+                        <input type="tel" id="member-phone" name="member-phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="member-comments">Comments/Questions (Optional)</label>
+                        <textarea id="member-comments" name="member-comments" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Express Interest</button>
+                </form>
+                 <p id="membership-submission-message" style="margin-top: 20px; text-align:center;"></p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content copied from index.html -->
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="sermons.html">Sermons</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="give.html">Give</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>16 Tololamoro Street, Block 8, Gaborone, Botswana</p>
+                <p>Phone: <a href="tel:+26772991256">+267 72 991 256</a></p>
+                <p>Email: info@citybiblechurch.org</p>
+                <p>WhatsApp: <a href="https://wa.me/26772991256" target="_blank">+267 72 991 256</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <p>Facebook | Twitter | Instagram</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 City Bible Church. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Chat/WhatsApp Button -->
+    <a href="https://wa.me/26772991256" target="_blank" class="chat-button" title="Chat on WhatsApp">
+        <img src="images/whatsapp-icon.png" alt="WhatsApp Chat"> <!-- Placeholder for icon -->
+    </a>
+
+    <script src="js/script.js"></script>
+     <script>
+        // Basic form submission feedback (no actual submission)
+        const membershipForm = document.getElementById('membership-interest-form');
+        const membershipMessage = document.getElementById('membership-submission-message');
+        if(membershipForm && membershipMessage) {
+            membershipForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                membershipMessage.textContent = 'Thank you for your interest! We will be in touch soon with more information.';
+                membershipMessage.style.color = 'green';
+                membershipForm.reset(); // Clear the form
+                setTimeout(() => { membershipMessage.textContent = ''; }, 5000); // Clear message after 5 seconds
+            });
+        }
+    </script>
+</body>
+</html>

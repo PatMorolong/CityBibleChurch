@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Requests - City Bible Church</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                 <a href="index.html">
+                    <img src="../CBC CHURCH logo.png" alt="City Bible Church Logo" class="logo-img">
+                 </a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="sermons.html">Sermons</a></li>
+                <li><a href="bible-study.html">Bible Study</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="prayer.html" class="active">Prayer Requests</a></li>
+                <li><a href="membership.html">Become a Member</a></li>
+                <li><a href="give.html">Give</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Prayer Requests</h1>
+                <p>Let Us Pray With You</p>
+            </div>
+        </section>
+
+        <section class="prayer-request-content container">
+            <p>Your requests are kept confidential and shared only with our dedicated prayer team. Please fill out the form below.</p>
+
+            <form id="prayer-request-form" class="styled-form">
+                <div class="form-group">
+                    <label for="name">Name (Optional)</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email (Optional, for follow-up)</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address">
+                </div>
+
+                <div class="form-group">
+                    <label for="request">Prayer Request</label>
+                    <textarea id="request" name="request" rows="6" placeholder="Share your prayer need here..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Additional Options:</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="confidential" name="confidential" value="yes" checked>
+                        <label for="confidential">Keep this request confidential (Prayer Team Only)</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="home-visit" name="home-visit" value="yes">
+                        <label for="home-visit">I would like to request a home visit for prayer.</label>
+                    </div>
+                     <div class="checkbox-group">
+                        <input type="checkbox" id="overnight-prayer" name="overnight-prayer" value="yes">
+                        <label for="overnight-prayer">I would like to request an overnight prayer session at my residence.</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="connect-intercessor" name="connect-intercessor" value="yes">
+                        <label for="connect-intercessor">Please connect me with an intercessor.</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="cta-button">Submit Prayer Request</button>
+            </form>
+            <p id="form-submission-message" style="margin-top: 20px; text-align:center;"></p>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content copied from index.html -->
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="sermons.html">Sermons</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="give.html">Give</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>16 Tololamoro Street, Block 8, Gaborone, Botswana</p>
+                <p>Phone: <a href="tel:+26772991256">+267 72 991 256</a></p>
+                <p>Email: info@citybiblechurch.org</p>
+                <p>WhatsApp: <a href="https://wa.me/26772991256" target="_blank">+267 72 991 256</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <p>Facebook | Twitter | Instagram</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 City Bible Church. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Chat/WhatsApp Button -->
+    <a href="https://wa.me/26772991256" target="_blank" class="chat-button" title="Chat on WhatsApp">
+        <img src="images/whatsapp-icon.png" alt="WhatsApp Chat"> <!-- Placeholder for icon -->
+    </a>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Basic form submission feedback (no actual submission)
+        const prayerForm = document.getElementById('prayer-request-form');
+        const submissionMessage = document.getElementById('form-submission-message');
+        if(prayerForm && submissionMessage) {
+            prayerForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                submissionMessage.textContent = 'Thank you for submitting your prayer request. Our team will be praying for you.';
+                submissionMessage.style.color = 'green';
+                prayerForm.reset(); // Clear the form
+                setTimeout(() => { submissionMessage.textContent = ''; }, 5000); // Clear message after 5 seconds
+            });
+        }
+    </script>
+</body>
+</html>
